@@ -5,6 +5,7 @@ let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
 
 let turnO = true; //playerx, playero
+let count =0;
 
 const winPatterns = [
   [0, 1, 2],
@@ -78,6 +79,7 @@ const checkWinner = () => {
     if (pos1Val != "" && pos2Val != "" && pos3Val != "") {
       if (pos1Val === pos2Val && pos2Val === pos3Val) {
         showWinner(pos1Val);
+        return true;
       }
     }
   }
